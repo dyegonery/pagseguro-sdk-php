@@ -1,7 +1,7 @@
 ### 6.0.0 (29/11/2018)
 
 #### Implementações
-   * A lib foi atualizada para funcionar no PHP 7.1.3 em diante
+   * A lib foi atualizada para funcionar no PHP 8.1.3 em diante
 
 #### 5.0.1 (14/11/2018)
 
