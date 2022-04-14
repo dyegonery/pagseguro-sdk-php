@@ -42,7 +42,7 @@ class CreditCard
     /**
      * @param \PagSeguro\Domains\Account\Credentials $credentials
      * @param \PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $payment
-     * @return string
+     * @return mixed
      * @throws \Exception
      */
     public static function checkout(
