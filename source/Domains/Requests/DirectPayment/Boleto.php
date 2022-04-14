@@ -34,7 +34,7 @@ class Boleto extends Request
 {
     /**
      * @param $credentials
-     * @return string
+     * @return mixed
      * @throws \Exception
      */
     public function register($credentials)
