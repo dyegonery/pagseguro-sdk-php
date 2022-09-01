@@ -60,8 +60,8 @@ class Xhr
     public static function getInputCode()
     {
         //use filter input instead of super globals for security
-        return filter_input(INPUT_POST, 'notificationCode', FILTER_SANITIZE_STRING) !== null ?
-            filter_input(INPUT_POST, 'notificationCode', FILTER_SANITIZE_STRING) : null;
+        return filter_input(INPUT_POST, 'notificationCode', FILTER_UNSAFE_RAW) !== null ?
+            filter_input(INPUT_POST, 'notificationCode', FILTER_UNSAFE_RAW) : null;
     }
 
     /**
@@ -71,8 +71,8 @@ class Xhr
     public static function getInputType()
     {
         //use filter input instead of super globals for security
-        return filter_input(INPUT_POST, 'notificationType', FILTER_SANITIZE_STRING) !== null ?
-            filter_input(INPUT_POST, 'notificationType', FILTER_SANITIZE_STRING) : null;
+        return filter_input(INPUT_POST, 'notificationType', FILTER_UNSAFE_RAW) !== null ?
+            filter_input(INPUT_POST, 'notificationType', FILTER_UNSAFE_RAW) : null;
     }
 
     /**
