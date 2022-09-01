@@ -76,14 +76,13 @@ trait Item
     {
         foreach ($items->item as $value) {
             $this->addItems()->withParameters(
-                current($value->id),
-                current($value->description),
-                current($value->quantity),
-                current($value->amount)
+                $value->id,
+                $value->description,
+                $value->quantity,
+                $value->amount
             );
         }
 
-        $this->items = current($this->getItems());
         return $this;
     }
 
