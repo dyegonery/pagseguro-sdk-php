@@ -52,23 +52,23 @@ trait CreditorFees
         $creditor = new \PagSeguro\Domains\CreditorFees();
 
         if (!is_null($creditorFees->intermediationRateAmount)) {
-            $creditor->setIntermediationRateAmount(current($creditorFees->intermediationRateAmount));
+            $creditor->setIntermediationRateAmount($creditorFees->intermediationRateAmount);
         }
 
         if (!is_null($creditorFees->intermediationFeeAmount)) {
-            $creditor->setIntermediationFeeAmount(current($creditorFees->intermediationFeeAmount));
+            $creditor->setIntermediationFeeAmount($creditorFees->intermediationFeeAmount);
         }
 
         if (!is_null($creditorFees->installmentFeeAmount)) {
-            $creditor->setInstallmentFeeAmount(current($creditorFees->installmentFeeAmount));
+            $creditor->setInstallmentFeeAmount($creditorFees->installmentFeeAmount);
         }
 
         if (!is_null($creditorFees->operationalFeeAmount)) {
-            $creditor->setOperationalFeeAmount(current($creditorFees->operationalFeeAmount));
+            $creditor->setOperationalFeeAmount($creditorFees->operationalFeeAmount);
         }
 
         if (!is_null($creditorFees->commissionFeeAmount)) {
-            $creditor->setCommissionFeeAmount(current($creditorFees->commissionFeeAmount));
+            $creditor->setCommissionFeeAmount($creditorFees->commissionFeeAmount);
         }
 
         $this->creditorFees = $creditor;

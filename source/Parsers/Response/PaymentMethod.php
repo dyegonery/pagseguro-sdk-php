@@ -51,7 +51,7 @@ trait PaymentMethod
     {
         if ($paymentMethod) {
             $payment = new \PagSeguro\Domains\Responses\PaymentMethod();
-            $payment->setType(current($paymentMethod->type))->setCode(current($paymentMethod->code));
+            $payment->setType($paymentMethod->type)->setCode($paymentMethod->code);
             $this->paymentMethod = $payment;
         }
         return $this;
