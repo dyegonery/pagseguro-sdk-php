@@ -56,13 +56,13 @@ trait Sender
 
         if (isset($sender->phone)) {
             $phone
-                ->setAreaCode($sender->phone->areaCode)
-                ->setNumber($sender->phone->number);
+                ->setAreaCode(current($sender->phone->areaCode))
+                ->setNumber(current($sender->phone->number));
         }
 
         $senderClass = new \PagSeguro\Domains\Sender();
-        $this->sender = $senderClass->setName($sender->name)
-            ->setEmail($sender->email)
+        $this->sender = $senderClass->setName(current($sender->name))
+            ->setEmail(current($sender->email))
             ->setPhone($phone)
             ->setDocuments(new Document());
 

@@ -87,7 +87,7 @@ class Builder
         return sprintf(
             "%s://%s",
             $protocol,
-            $xml->path->{$resource}->environment->{$environment}
+            current($xml->path->{$resource}->environment->{$environment})
         );
     }
 
@@ -124,7 +124,7 @@ class Builder
         return sprintf(
             "%s/%s",
             $url,
-            self::getProperties($xml, $service, $http)
+            current(self::getProperties($xml, $service, $http))
         );
     }
 

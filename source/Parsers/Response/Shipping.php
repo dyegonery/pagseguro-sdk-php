@@ -53,7 +53,7 @@ trait Shipping
      */
     public function setShipping($shipping)
     {
-        if ($shipping !== false) {
+        if (current($shipping) !== false) {
             $shippingClass = new \PagSeguro\Domains\Shipping();
 
             $shippingAddress = new Address($shippingClass);
